@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'menu_page.dart';
+import 'connexion_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,7 +52,7 @@ class _CftvaHomePageState extends State<CftvaHomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return MenuPage();
+                    return ConnexionPage();
                   },
                 ),
               );
