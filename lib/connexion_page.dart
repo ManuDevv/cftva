@@ -4,6 +4,10 @@ class ConnexionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('CFTVA'),
+        centerTitle: true,
+      ),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(

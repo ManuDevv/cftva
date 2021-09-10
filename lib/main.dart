@@ -12,8 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-         home: CftvaHomePage());
+        debugShowCheckedModeBanner: false, home: CftvaHomePage());
   }
 }
 
@@ -32,42 +31,64 @@ class _CftvaHomePageState extends State<CftvaHomePage> {
         title: Text('CFTVA', style: TextStyle(fontWeight: FontWeight.bold)),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.menu_rounded))],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Chemin de fer touristique de la vallée de l'Aa",
-            style: TextStyle(
-              fontSize: 28,
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              colors: [
+            
+          Colors.blue.shade200,
+          Colors.blueAccent.shade700,
+          Colors.blue.shade900
+        ])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(
+              height: 20,
             ),
-            textAlign: TextAlign.center,
-          ),
-          Image.asset('images/vapeur.jpg'),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return ConnexionPage();
-                  },
-                ),
-              );
-            },
-            color: Colors.blue.shade600,
-            height: 50,
-            child: Text(
-              'Entrer',
+            Text(
+              "Chemin de fer touristique de la vallée de l'Aa",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
+                  fontSize: 28,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600),
+              textAlign: TextAlign.center,
             ),
-          )
-        ],
+            Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(60)),
+                  
+                child: Image.asset('images/vapeur.jpg')),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ConnexionPage();
+                    },
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+              primary: Colors.white
+              
+
+              
+              ),
+
+              child: Text(
+                'Entrer',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
