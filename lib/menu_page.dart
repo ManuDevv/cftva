@@ -38,16 +38,25 @@ class MenuPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text(
-                    'CONDUCTEUR',
-                    style: GoogleFonts.robotoCondensed(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
+                  child: Container(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Column(
+                      
+                      children: [
+                        Text(
+                          'CONDUCTEUR',
+                          style: GoogleFonts.robotoCondensed(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                          Image.asset('images/conduite.jpg'),
+                      ],
                     ),
                   ),
                 ),
               ),
-              Image.asset('images/conduite.jpg'),
+            
               Container(
                 width: 400,
                 child: Column(
@@ -62,17 +71,23 @@ class MenuPage extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {},
-                      child: Text(
-                        'AGENT DE DESSERTE',
-                        style: GoogleFonts.robotoCondensed(
-                          fontSize: 40,
-                          fontWeight: FontWeight.w600,
+                      child: Container(
+                        padding:EdgeInsets.only(bottom:10),
+                        child: Column(
+                          children: [
+                            Text(
+                              'AGENT DE DESSERTE',
+                              style: GoogleFonts.robotoCondensed(
+                                fontSize: 40,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                           Image.asset('images/add2.jpeg')
+                          ],
                         ),
                       ),
                     ),
-                    Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: Image.asset('images/add2.jpeg'))
+                    
                   ],
                 ),
               ),
@@ -93,16 +108,20 @@ class MenuPage extends StatelessWidget {
                       return CommercialPage();
                     }));
                   },
-                  child: Text(
-                    'COMMERCIAL',
-                    style: GoogleFonts.robotoCondensed(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'COMMERCIAL',
+                        style: GoogleFonts.robotoCondensed(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+              Image.asset('images/commercial.jpg')
+                    ],
                   ),
                 ),
               ),
-              Image.asset('images/commercial.jpg')
             ],
           ),
         ));

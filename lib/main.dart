@@ -36,30 +36,31 @@ class _CftvaHomePageState extends State<CftvaHomePage> {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-              colors: [
-            
-          Colors.blue.shade200,
-          Colors.blueAccent.shade700,
-          Colors.blue.shade900
-        ])),
+                colors: [
+              Colors.blue.shade200,
+              Colors.blueAccent.shade700,
+              Colors.blue.shade900
+            ])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
-              height: 20,
+              height: 40,
             ),
-            Text(
-              "Chemin de fer touristique de la vallée de l'Aa",
-              style: TextStyle(
-                  fontSize: 28,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600),
-              textAlign: TextAlign.center,
+            Container(
+              padding: EdgeInsets.all(30),
+              child: Text(
+                '''  Chemin de fer touristique de la vallée de l'Aa ''',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600),
+                textAlign: TextAlign.center,
+              ),
             ),
             Container(
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(60)),
-                  
                 child: Image.asset('images/vapeur.jpg')),
             ElevatedButton(
               onPressed: () {
@@ -72,17 +73,16 @@ class _CftvaHomePageState extends State<CftvaHomePage> {
                   ),
                 );
               },
-              style: ElevatedButton.styleFrom(
-              primary: Colors.white
-              
-
-              
-              ),
-
+              style:
+                  ElevatedButton.styleFrom(primary: Colors.white,
+                  padding:EdgeInsets.fromLTRB(130, 15, 130, 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)
+                  )),
               child: Text(
-                'Entrer',
+                'Entrer'.toUpperCase(),
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.blue.shade500,
                   fontSize: 20,
                 ),
               ),
